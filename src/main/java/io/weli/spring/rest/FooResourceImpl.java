@@ -1,14 +1,14 @@
 package io.weli.spring.rest;
 
+import io.weli.spring.def.FooResource;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 
-@Path("/foo")
-@Controller
-public class FooResource {
-   @GET
+@Component
+public class FooResourceImpl implements FooResource {
    public String foo() {
       return "foo";
    }
